@@ -67,6 +67,8 @@ public class ScratchLinkedList {
             // Assign current node to the next node;
             currentNode = currentNode.next;
         }
+        // Print last node
+        System.out.print(currentNode.data + " \n");
     }
 
     /**
@@ -103,5 +105,57 @@ public class ScratchLinkedList {
             }
         }
         return middleNode;
+    }
+
+    /**
+     * A Method that Bubble Sorts a ScratchLinkedList
+     * O(n^2)
+     * @param list
+     * @return
+     */
+    public ScratchLinkedList bubbleSortScratchLinkedList(ScratchLinkedList list) {
+        Node currentNode = list.head;
+        Node nextNode = null;
+        int dataHolder;
+
+        // Check for null List before continuing
+        if(list.head != null) {
+            while(currentNode != null) {
+                nextNode = currentNode.next;
+                while (nextNode != null) {
+                    // If current note is larger than next node, swap them
+                    if(currentNode.data > nextNode.data) {
+                        // Move current node data to placeholder
+                        dataHolder = currentNode.data;
+
+                        // Move nextNode data to currentNode
+                        currentNode.data = nextNode.data;
+
+                        // Move data from placeholder to next node;
+                        nextNode.data = dataHolder;
+                    }
+                    // Move to Next Node
+                    nextNode = nextNode.next;
+                }
+                // Move to next Node
+                currentNode = currentNode.next;
+            }
+        }
+        // Return Sorted List
+        return list;
+    }
+
+    public ScratchLinkedList insertionSortScratchLinkedList(ScratchLinkedList list) {
+
+        Node sorted = null;
+        Node unsortedNode = list.head;
+
+        while (unsortedNode.next != null) {
+
+        }
+
+
+
+        return list;
     }
 }

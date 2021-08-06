@@ -37,5 +37,34 @@ public class ScratchLinkedListTest {
         assertTrue(middleNode.data == 5);
     }
 
+    @Test
+    public void testCanBubbleSortScratchLinkedList() {
+        ScratchLinkedList unsortedList = new ScratchLinkedList();
+        unsortedList.insert(unsortedList, 8);
+        unsortedList.insert(unsortedList,3);
+        unsortedList.insert(unsortedList,9);
+        unsortedList.insert(unsortedList,2);
+        unsortedList.insert(unsortedList,1);
+        unsortedList.printList(unsortedList);
+
+        ScratchLinkedList sortedList = new ScratchLinkedList();
+        sortedList = sortedList.bubbleSortScratchLinkedList(unsortedList);
+        sortedList.printList(sortedList);
+    }
+
+    @Test
+    public void testCanInsertionSortScratchLinkedList() {
+        ScratchLinkedList unsortedList = new ScratchLinkedList();
+        unsortedList.insert(unsortedList, 8);
+        unsortedList.insert(unsortedList,3);
+        unsortedList.insert(unsortedList,9);
+        unsortedList.insert(unsortedList,2);
+        unsortedList.insert(unsortedList,1);
+        unsortedList.printList(unsortedList);
+
+        ScratchLinkedList sortedList = new ScratchLinkedList();
+        sortedList = sortedList.insertionSortScratchLinkedList(unsortedList);
+        sortedList.printList(sortedList);
+    }
 
 }
